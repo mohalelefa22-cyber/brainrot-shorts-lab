@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b10">
+  <title>Brainrot Shorts Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">30-SECOND SHORTS</p>
+        <h1>Brainrot Shorts Lab 🧠</h1>
+      </div>
+      <button id="randomTop" class="icon-btn" aria-label="Generate random concept">🎲</button>
+    </header>
+
+    <section class="card generator">
+      <label for="topic">Topic / theme</label>
+      <div class="input-row">
+        <input id="topic" maxlength="80" placeholder="e.g. a cat trying to become a CEO">
+        <button id="generate" class="primary">Generate</button>
+      </div>
+
+      <label>Preset</label>
+      <div id="presets" class="chips"></div>
+    </section>
+
+    <section id="result" class="hidden">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">GENERATED SHORT</p>
+          <h2 id="conceptTitle"></h2>
+        </div>
+        <button id="another" class="secondary">Generate Another</button>
+      </div>
+
+      <div class="phone-preview">
+        <div class="preview-top">
+          <span>9:16 STORYBOARD</span>
+          <span id="previewPreset"></span>
+        </div>
+        <div id="previewScenes" class="scene-list"></div>
+      </div>
+
+      <div class="actions">
+        <button id="copyAll" class="primary wide">📋 Copy Complete Package</button>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>🎬 Script</h3>
+          <div id="script"></div>
+        </article>
+        <article class="card">
+          <h3>💬 Captions</h3>
+          <div id="captions"></div>
+        </article>
+        <article class="card">
+          <h3>🔊 Audio</h3>
+          <div id="audio"></div>
+        </article>
+        <article class="card">
+          <h3>📱 Upload Pack</h3>
+          <div class="upload-pack">
+            <p><b>Title</b><br><span id="videoTitle"></span></p>
+            <p><b>Hashtags</b><br><span id="hashtags"></span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="empty" class="empty">
+      <div class="big-emoji">🧠💥</div>
+      <h2>Give me a topic.</h2>
+      <p>I'll turn it into a 30-second vertical chaos machine.</p>
+    </section>
+
+    <div id="toast" class="toast" role="status"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
